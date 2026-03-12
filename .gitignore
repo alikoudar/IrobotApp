@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+.DS_Store
+backups/
+.claude/
+.playwright-mcp/
+frontend-html/
+backend/celerybeat-schedule
