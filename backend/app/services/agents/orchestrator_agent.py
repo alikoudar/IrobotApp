@@ -50,7 +50,7 @@ class OrchestratorAgent:
 
     async def _classify(self, message: str, db: AsyncSession, user_id: str | None = None) -> str:
         """Classify user intent as 'greeting' or 'query'."""
-        chat_model = await config_service.get_value("chat_model", db)
+        chat_model = await config_service.get_value("classify_model", db)
         usd_to_xaf = await config_service.get_value("usd_to_xaf_rate", db)
         client = self._get_client()
 
@@ -112,7 +112,7 @@ class OrchestratorAgent:
         self, message: str, db: AsyncSession, user_id: str | None = None
     ) -> str | None:
         """Generate a short conversation title."""
-        chat_model = await config_service.get_value("chat_model", db)
+        chat_model = await config_service.get_value("title_model", db)
         usd_to_xaf = await config_service.get_value("usd_to_xaf_rate", db)
         client = self._get_client()
         from app.services.agents.prompts import TITLE_SYSTEM_PROMPT, TITLE_USER_TEMPLATE

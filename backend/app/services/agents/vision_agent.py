@@ -47,7 +47,7 @@ class VisionAgent:
     ) -> str:
         """Extract text from image using Mistral Small vision (non-streaming)."""
         client = self._get_client()
-        chat_model = await config_service.get_value("chat_model", db)
+        chat_model = await config_service.get_value("vision_model", db)
 
         messages = [
             {
@@ -102,7 +102,7 @@ class VisionAgent:
         result: StreamResult,
         user_id: str | None = None,
     ) -> AsyncGenerator[str, None]:
-        model = await config_service.get_value("chat_model", db)
+        model = await config_service.get_value("vision_model", db)
         max_tokens = await config_service.get_value("chat_max_tokens", db)
         client = self._get_client()
 

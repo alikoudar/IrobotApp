@@ -31,6 +31,10 @@ VALID_KEYS: dict[str, dict[str, Any]] = {
     "rerank_model": {"type": str},
     "rerank_top_k": {"type": int, "min": 1, "max": 50},
     "rerank_enabled": {"type": bool},
+    "title_model": {"type": str},
+    "classify_model": {"type": str},
+    "vision_model": {"type": str},
+    "greeting_model": {"type": str},
 }
 
 

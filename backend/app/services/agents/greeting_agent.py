@@ -36,7 +36,7 @@ class GreetingAgent:
         db: AsyncSession,
         user_id: str | None = None,
     ) -> AsyncGenerator[str, None]:
-        model = await config_service.get_value("chat_model", db)
+        model = await config_service.get_value("greeting_model", db)
         max_tokens = await config_service.get_value("chat_max_tokens", db)
         client = self._get_client()
 
@@ -69,7 +69,7 @@ class GreetingAgent:
             cost_xaf = cost_usd * Decimal(str(usd_to_xaf))
             db.add(TokenUsage(
                 user_id=user_id,
-                operation="chat",
+                operation="greeting",
                 model=model,
                 input_tokens=input_tokens,
                 output_tokens=output_tokens,

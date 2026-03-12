@@ -48,7 +48,11 @@ INSERT INTO app_config (key, value, description, category, updated_at) VALUES
     ('batch_timeout_minutes', '30', 'Timeout du batch OCR en minutes', 'ocr', NOW()),
     ('rerank_model', '"mistral-medium-latest"', 'Modèle de reclassement', 'models', NOW()),
     ('rerank_top_k', '3', 'Nombre de résultats après reclassement', 'rag', NOW()),
-    ('rerank_enabled', 'true', 'Activer le reclassement LLM', 'rag', NOW())
+    ('rerank_enabled', 'true', 'Activer le reclassement LLM', 'rag', NOW()),
+    ('title_model', '"mistral-small-latest"', 'Modèle de génération de titres', 'models', NOW()),
+    ('classify_model', '"mistral-small-latest"', 'Modèle de classification d''intention', 'models', NOW()),
+    ('vision_model', '"mistral-small-latest"', 'Modèle de vision (analyse d''image)', 'models', NOW()),
+    ('greeting_model', '"mistral-small-latest"', 'Modèle de réponse aux salutations', 'models', NOW())
 ON CONFLICT (key) DO NOTHING;
 """
 

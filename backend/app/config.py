@@ -39,6 +39,12 @@ class Settings(BaseSettings):
     chat_model: str = "mistral-small-latest"
     chat_max_tokens: int = 2048
 
+    # Per-task models
+    title_model: str = "mistral-small-latest"
+    classify_model: str = "mistral-small-latest"
+    vision_model: str = "mistral-small-latest"
+    greeting_model: str = "mistral-small-latest"
+
     # RAG
     rag_top_k: int = 5
 

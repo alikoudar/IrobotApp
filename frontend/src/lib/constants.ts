@@ -44,6 +44,10 @@ export const CONFIG_LABELS: Record<string, string> = {
   usd_to_xaf_rate: "Taux USD \u2192 XAF",
   chat_max_tokens: "Tokens max (chat)",
   batch_timeout_minutes: "Timeout batch OCR (min)",
+  title_model: "Mod\u00e8le de titres",
+  classify_model: "Mod\u00e8le de classification",
+  vision_model: "Mod\u00e8le de vision",
+  greeting_model: "Mod\u00e8le de salutations",
 };
 
 export const CONFIG_CATEGORY_LABELS: Record<string, string> = {
@@ -60,6 +64,10 @@ export const OPERATION_LABELS: Record<string, string> = {
   ocr: "OCR",
   classify: "Classification",
   title_gen: "Titre",
+  vision_ocr: "Vision OCR",
+  vision: "Vision",
+  greeting: "Salutation",
+  rerank: "Reclassement",
 };
 
 export const ENTITY_TYPE_OPTIONS = [
